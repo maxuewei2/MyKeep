@@ -1,136 +1,141 @@
-*{
+* {
 margin:0;
 }
-.todo_done_div input{
+
+.task_done_div input {
 background-color:#fff;
 border:1px solid #444;
-padding:100px;
 color:#fff;
+padding:100px;
 }
-textarea{
-wrap="physical"
+
+textarea {
+wrap:physical;
 }
-body
-{
-	background-color:#e8e8e8;
-	padding-left:20%;
-    padding-right:20%;
-    padding-bottom:200px;
+
+body {
+background-color:#e8e8e8;
+padding-left:20%;
+padding-right:20%;
 }
-#content_body{
+
+#content_body {
 padding:50px 0;
-/*border-left:1px solid #444;
-border-right:1px solid #444;*/
+padding-bottom:200px;
 }
-.todo_div{
-margin:10px 0px;
-padding:5px 0px;
+
+.task_div {
 background-color:#fafafa;
+color:#444;
 width:100%;
 overflow:hidden;
+margin:10px 0;
+padding:5px 0;
 }
-.todo_id_div{
+
+.task_id_div {
 float:left;
 width:10%;
 color:#777;
 }
-.todo_content_div{
+
+.task_content_div {
 float:left;
 padding-top:10px;
 padding-bottom:10px;
 width:70%;
 overflow:hidden;
 }
-.edit_area{
+
+.edit_area {
 background-color:#fafafa;
 border:0;
 width:80%;
 resize:none;
 }
-.todo_btn_div{
+
+.task_btn_div {
 float:right;
 width:10%;
 overflow:hidden;
 }
-.todo_btn_div button{
+
+.task_btn_div button {
 border:0;
-padding:5px 10px;
 margin:5px 10px;
+padding:5px 10px;
 }
-.todo_time_div{
+
+.task_time_div {
 float:right;
 min-width:40%;
 text-align:right;
 color:#777;
 }
-.todo_done_div{
-padding:5px 5px;
+
+.task_done_div {
 float:left;
 width:5%;
-}
-.todo_up_div{
-width:100%;
-overflow:hidden;
-}
-.todo_down_div{
-width:100%;
-overflow:hidden;
+padding:5px;
 }
 
-#nav{
+#nav {
 position:fixed;
 left:10px;
 top:50px;
 }
-#nav a{
+
+#nav a {
 text-decoration:none;
 color:#444;
 display:block;
 cursor:pointer;
-padding:20px 40px;
 background-color:#fff;
-}
-#nav a:hover{
-background-color:grey;
-color:#eee;
+padding:20px 40px;
 }
 
-.show_setting{
+.show_setting {
 background-color:#fff;
 cursor:pointer;
 text-decoration:none;
 color:#444;
 display:block;
-padding:10px 10px;
 position:fixed;
 right:10px;
 top:50px;
+padding:10px;
 }
-
-#top_bottom{
+.show_setting img{
+width:30px;
+height:30px;
+}
+#top_bottom {
 position:fixed;
 right:10px;
 bottom:50px;
 }
-#top_bottom a{
+
+#top_bottom a {
 text-align:center;
 text-decoration:none;
 color:#444;
 display:block;
 cursor:pointer;
-padding:10px 20px;
 background-color:#fff;
+padding:10px 20px;
 }
-#top_bottom a:hover{
+
+pre {
+white-space:0;
+word-wrap:break-word;
+}
+
+.task_up_div,.task_down_div {
+overflow:hidden;
+width:100%;
+}
+
+#nav a:hover,#top_bottom a:hover {
 background-color:grey;
 color:#eee;
 }
-
-pre{
-white-space:pre-wrap; /* css3.0 */
-white-space:-moz-pre-wrap; /* Firefox */
-white-space:-pre-wrap; /* Opera 4-6 */
-white-space:-o-pre-wrap; /* Opera 7 */
-word-wrap:break-word; /* Internet Explorer 5.5+ */
-}
-

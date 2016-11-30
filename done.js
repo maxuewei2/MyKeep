@@ -1,18 +1,17 @@
-function delete_todo(id){
+function delete_task(id){
 if(confirm('确定删除?')){
-    var url="delete_todo.php";
+    var url="delete_task.php";
 	var args="id="+id;
 	postajax("",url,args);
 	}
 }
 function back_done(id){
-    var url="back_done_todo.php";
+    var url="back_done_task.php";
 	var args="id="+id;
 	postajax_done("",url,args);
 }
 function check_done_done(id){
     if(this.checked=="checked"){
-    alert("fff");
         this.checked="";
 
     }else{
@@ -42,7 +41,7 @@ xmlhttp.onreadystatechange=function()
         return;
     }
     else{
-history.go(0);
+        location.reload(true);
     }
     }
   }

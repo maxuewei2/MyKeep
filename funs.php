@@ -28,10 +28,10 @@ echo <<<HEAD
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="shortcut icon" href="images/favicon.ico" >
+<link rel="shortcut icon" href="favicon.ico" />
 <title>MyKeep</title>
 <link href="common.css" rel="stylesheet" type="text/css" />
-<link href="todo.css" rel="stylesheet" type="text/css" />
+<link href="task.css" rel="stylesheet" type="text/css" />
 <link href="done.css" rel="stylesheet" type="text/css" />
 <link href="timer.css" rel="stylesheet" type="text/css" />
 </head>
@@ -39,7 +39,7 @@ echo <<<HEAD
 <body>
 
 <a id="show_setting" class="show_setting" href="show_setting.php">
-三
+<img src="image/setting.png"/>
 </a>
 
 <div id="top_bottom">
@@ -47,13 +47,13 @@ echo <<<HEAD
 <!--
 <a class="to_bottom" href="#end">Bottom</a>
 -->
-<a class="to_bottom" href="javascript:void(0);" onclick="javascript:document.getElementsByTagName('BODY')[0].scrollTop=document.getElementsByTagName('BODY')[0].scrollHeight;">Bottom</a>
+<a class="to_bottom" href="#end_of_docu">Bottom</a>
 </div>
 
 
 <div id="nav">
-<a id="show_todo" class="show_nav_a" href="show_todos.php" >
-Todo
+<a id="show_task" class="show_nav_a" href="show_tasks.php" >
+Task
 </a>
 <a id="show_done" class="show_nav_a" href="show_dones.php">
 Done
@@ -75,11 +75,11 @@ echo<<<FOOT
 
 <script src="common.js" type="text/javascript"></script>
 <script src="edit.js" type="text/javascript"></script>
-<script src="todo.js" type="text/javascript"></script>
+<script src="task.js" type="text/javascript"></script>
 <script src="done.js" type="text/javascript"></script>
 <script src="timer.js" type="text/javascript"></script>
 </body>
-
+<a name="end_of_docu"></a>
 </html>
 FOOT;
 

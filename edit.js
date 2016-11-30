@@ -43,7 +43,7 @@ function set_btns(id, i) {
     }
 }
 function add_backup_area(id) {
-    var did = "todo_content_div" + id;
+    var did = "task_content_div" + id;
     var d = document.getElementById(did);
     var eb = document.createElement("textarea");
     var eid = "edit_area" + id;
@@ -55,7 +55,7 @@ function add_backup_area(id) {
 }
 
 function remove_backup_area(id) {
-    var did = "todo_content_div" + id;
+    var did = "task_content_div" + id;
     var d = document.getElementById(did);
     var ebid = "edit_area_backup" + id;
     var eb = document.getElementById(ebid);
@@ -82,7 +82,7 @@ function edit_success(id) {
 }
 
 function update(id, content) {
-    var url = "update_todo.php";
+    var url = "update_task.php";
     var args = "id=" + id + "&content=" + content;
     postajax(id, url, args);
 }

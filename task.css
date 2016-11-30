@@ -1,0 +1,37 @@
+#new_task_input {
+border:0;
+background-color:#fafafa;
+height:100%;
+width:99%;
+margin:2px;
+padding:1px;
+}
+
+.submit_btn {
+float:right;
+height:100%;
+width:100px;
+background-color:#fafafa;
+border:0;
+margin:5px 0;
+padding:10px;
+}
+
+.edit_area_backup {
+display:none;
+}
+
+.edit_btn {
+width:70%;
+background-color:#eaeaea;
+}
+
+.add_div,.add_up_div {
+overflow:hidden;
+}
+
+.edit_ok,.edit_cancle {
+background-color:#eaeaea;
+display:none;
+width:70%;
+}

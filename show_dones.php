@@ -15,28 +15,28 @@ if($result){
         $done="<input onclick=\"check_done_done($row[task_id])\" type=\"checkbox\" checked=\"checked\">";
         $rows=get_lines_count($row['task_content']);
 echo <<<STR1
-<div class="todo_div">
-<div class="todo_up_div">
-<div class="todo_done_div">
+<div class="task_div">
+<div class="task_up_div">
+<div class="task_done_div">
 $done
 </div>
 <!--
-<div class="todo_id_div">
+<div class="task_id_div">
 $row[task_id]
 </div>
 -->
-    <div class="todo_content_div" id="todo_content_div$row[task_id]">
+    <div class="task_content_div" id="task_content_div$row[task_id]">
 <textarea class="edit_area" id="edit_area$row[task_id]" rows="$rows" disabled="disabled">$row[task_content]</textarea>
 </div>
 
-<div class="todo_btn_div">
-<button class="todo_delete_btn" onclick="delete_todo($row[task_id])">X</button>
+<div class="task_btn_div">
+<button class="task_delete_btn" onclick="delete_task($row[task_id])">X</button>
 </div>
 
 </div>
 <!--
-<div class="todo_down_div">
-<div class="todo_time_div">
+<div class="task_down_div">
+<div class="task_time_div">
 $row[task_add_time]
 </div>
 </div>

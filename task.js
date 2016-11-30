@@ -36,9 +36,9 @@
 
 
 function done(id){
-    var url="done_todo.php";
+    var url="done_task.php";
 	var args="id="+id;
-	postajax(id,url,args);
+	postajax("infoout",url,args);
 }
 function check_done(id){
     if(this.checked=="checked"){
@@ -65,7 +65,7 @@ if(/^\d+$/.test(id)){
 edit_success(id);
 }
 else{
-history.go(0);
+location.reload(true);
 }
 }
 
@@ -90,7 +90,7 @@ xmlhttp.onreadystatechange=function()
 error_handle(id);
     }
     else{
-//    alert(rt);
+
 success_handle(id);
     }
     }
@@ -106,7 +106,7 @@ xmlhttp.send(args);
  	if(content==''){document.getElementById("info_out").innerHTML="不能为空。";return;}
 // 	var reg=new RegExp("\\n","g");
 //    var content_html=content.replace(reg,'<br>');
-    var url="add_todo.php";
+    var url="add_task.php";
 	var args="content="+content;
 
 	postajax("info_out",url,args);
