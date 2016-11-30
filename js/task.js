@@ -36,7 +36,7 @@
 
 
 function done(id){
-    var url="done_task.php";
+    var url="../task/done_task.php";
 	var args="id="+id;
 	postajax("infoout",url,args);
 }

@@ -1,5 +1,5 @@
 <?php
-include 'funs.php';
+include '../funs.php';
 getDatabaseConnect($con);
 
 

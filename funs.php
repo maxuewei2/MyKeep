@@ -30,17 +30,17 @@ echo <<<HEAD
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="favicon.ico" />
 <title>MyKeep</title>
-<link href="common.css" rel="stylesheet" type="text/css" />
-<link href="task.css" rel="stylesheet" type="text/css" />
-<link href="done.css" rel="stylesheet" type="text/css" />
-<link href="timer.css" rel="stylesheet" type="text/css" />
-<link href="setting.css" rel="stylesheet" type="text/css" />
+<link href="../css/common.css" rel="stylesheet" type="text/css" />
+<link href="../css/task.css" rel="stylesheet" type="text/css" />
+<link href="../css/done.css" rel="stylesheet" type="text/css" />
+<link href="../css/timer.css" rel="stylesheet" type="text/css" />
+<link href="../css/setting.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
 
-<a id="show_setting" class="show_setting" href="show_setting.php">
-<img src="image/setting.png"/>
+<a id="show_setting" class="show_setting" href="../setting/show_setting.php">
+<img src="../image/setting.png"/>
 </a>
 
 <div id="top_bottom">
@@ -53,13 +53,13 @@ echo <<<HEAD
 
 
 <div id="nav">
-<a id="show_task" class="show_nav_a" href="show_tasks.php" >
+<a id="show_task" class="show_nav_a" href="../task/show_tasks.php" >
 Task
 </a>
-<a id="show_done" class="show_nav_a" href="show_dones.php">
+<a id="show_done" class="show_nav_a" href="../done/show_dones.php">
 Done
 </a>
-<a id="show_timer" class="show_nav_a" href="show_timer.php">
+<a id="show_timer" class="show_nav_a" href="../timer/show_timer.php">
 Timer
 </a>
 </div>
@@ -74,11 +74,11 @@ function echo_common_foot(){
 echo<<<FOOT
 </div> <!-- end of content_body div-->
 
-<script src="common.js" type="text/javascript"></script>
-<script src="edit.js" type="text/javascript"></script>
-<script src="task.js" type="text/javascript"></script>
-<script src="done.js" type="text/javascript"></script>
-<script src="timer.js" type="text/javascript"></script>
+<script src="../js/common.js" type="text/javascript"></script>
+<script src="../js/edit.js" type="text/javascript"></script>
+<script src="../js/task.js" type="text/javascript"></script>
+<script src="../js/done.js" type="text/javascript"></script>
+<script src="../js/timer.js" type="text/javascript"></script>
 </body>
 <a name="end_of_docu"></a>
 </html>

@@ -1,5 +1,5 @@
 <?php
-include 'funs.php';
+include '../funs.php';
 $c=getDatabaseConnect($con);
 if($c==-1){
 echo "Error.Can't connect the database.";
