@@ -6,35 +6,45 @@ echo "Error.Can't connect the database.";
 exit;
 }
 
+$sql="SELECT setting_content FROM `setting` where setting_name='work_time' ";
+$result =$con->query($sql);
+if($result){
+$row = $result->fetch_array();
+$work_time=$row['setting_content'];
+}else{
+echo "Error.Can't get settings.";
+exit;
+}
+
+$sql="SELECT setting_content FROM `setting` where setting_name='break_time' ";
+$result =$con->query($sql);
+if($result){
+$row = $result->fetch_array();
+$break_time=$row['setting_content'];
+}else{
+echo "Error.Can't get settings.";
+exit;
+}
+
 echo_common_head();
-echo<<<CSS
-<style>
-.setting_input{
-background-color:#fff;
-color:#444;
-padding:10px 20px;
-border:0;
-margin:5px 10px;
-}
-.setting_table th{
-text-align:right;
-}
-</style>
-CSS;
+
 echo <<<HTMLSTR
 <table class="setting_table" border="0">
 
 <tr>
-<th>work_time:</th>
-<td><input class="setting_input" type="text" name="wtime" id="work_time_input" required="required"></td>
+<th>Work_time:</th>
+<td>
+<input class="setting_input" type="number" min="1" max="60" name="wtime" id="work_time_input" required="required" value=$work_time />
+</td>
+<td rowspan="2" ><button class="setting_input submit_setting_btn" type="button"  id="submit_btn" onclick="submit_setting()">保存更改</button></td>
 </tr>
 
 <tr>
-<th>break_time:</th>
-<td><input class="setting_input" type="text" name="btime" id="break_time_input" required="required"></td>
+<th>Break_time:</th>
+<td>
+<input class="setting_input" type="number" min="1" max="60" name="btime" id="break_time_input" required="required" value=$break_time />
+</td>
 </tr>
-
-<tr><td></td><td><button class="setting_input" type="button"  id="submit_btn" onclick="submit_setting()">保存更改</button></td></tr>
 
 </table>
 
@@ -79,7 +89,12 @@ xmlhttp.onreadystatechange=function()
   {
   if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {
-    document.getElementById(id).innerHTML=xmlhttp.responseText;
+//    document.getElementById(id).innerHTML=xmlhttp.responseText;
+var rr=xmlhttp.responseText;
+if(rr=="3"){alert("更新成功");}
+if(rr=="2"){alert("仅Break_time更新成功,Work_time更新失败.");}
+if(rr=="1"){alert("仅Work_time更新成功,Break_time更新失败.");}
+if(rr=="0"){alert("更新失败");}
     window.parent.SetCwinHeight();
     }
   }
