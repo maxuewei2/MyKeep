@@ -38,7 +38,7 @@
 function done(id){
     var url="done_todo.php";
 	var args="id="+id;
-	postajax("",url,args);
+	postajax(id,url,args);
 }
 function check_done(id){
     if(this.checked=="checked"){

@@ -1,6 +1,12 @@
 *{
 margin:0;
 }
+.todo_done_div input{
+background-color:#fff;
+border:1px solid #444;
+padding:100px;
+color:#fff;
+}
 textarea{
 wrap="physical"
 }
@@ -87,6 +93,18 @@ background-color:#fff;
 #nav a:hover{
 background-color:grey;
 color:#eee;
+}
+
+.show_setting{
+background-color:#fff;
+cursor:pointer;
+text-decoration:none;
+color:#444;
+display:block;
+padding:10px 10px;
+position:fixed;
+right:10px;
+top:50px;
 }
 
 #top_bottom{

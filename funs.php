@@ -4,7 +4,7 @@ date_default_timezone_set('Asia/Shanghai');//'Asia/Shanghai' 亚洲/上海
 function getDatabaseConnect(&$con){
     $db_host="localhost:3306";                                           //连接的服务器地址
     $db_user="keep";                                                  //连接数据库的用户名
-    $db_psw="101320032";                                                  //连接数据库的密码
+    $db_psw="mykeep";                                                  //连接数据库的密码
     $db_name="keep";                                           //连接的数据库名称
     $con=new mysqli($db_host,$db_user,$db_psw,$db_name);
     if (!$con){
@@ -38,12 +38,28 @@ echo <<<HEAD
 
 <body>
 
+<a id="show_setting" class="show_setting" href="show_setting.php">
+三
+</a>
+
+<div id="top_bottom">
+<a class="to_top" href="#top">Top</a>
+<!--
+<a class="to_bottom" href="#end">Bottom</a>
+-->
+<a class="to_bottom" href="javascript:void(0);" onclick="javascript:document.getElementsByTagName('BODY')[0].scrollTop=document.getElementsByTagName('BODY')[0].scrollHeight;">Bottom</a>
+</div>
+
+
 <div id="nav">
 <a id="show_todo" class="show_nav_a" href="show_todos.php" >
 Todo
 </a>
 <a id="show_done" class="show_nav_a" href="show_dones.php">
 Done
+</a>
+<a id="show_timer" class="show_nav_a" href="show_timer.php">
+Timer
 </a>
 </div>
 
@@ -57,13 +73,6 @@ function echo_common_foot(){
 echo<<<FOOT
 </div> <!-- end of content_body div-->
 
-<div id="top_bottom">
-<a class="to_top" href="#top">Top</a>
-<!--
-<a class="to_bottom" href="#end">Bottom</a>
--->
-<a class="to_bottom" href="javascript:void(0);" onclick="javascript:document.getElementsByTagName('BODY')[0].scrollTop=document.getElementsByTagName('BODY')[0].scrollHeight;">Bottom</a>
-</div>
 <script src="common.js" type="text/javascript"></script>
 <script src="edit.js" type="text/javascript"></script>
 <script src="todo.js" type="text/javascript"></script>
