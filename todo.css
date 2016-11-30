@@ -1,0 +1,47 @@
+.add_div{
+overflow:hidden;
+}
+#new_task_input{
+border:0;
+background-color:#fafafa;
+width:100%;
+height:100%;
+}
+#new_task_input{
+width:99%;
+/*border:2px solid #e8e8e8;*/
+padding:1px 1px;
+margin:2px 2px;
+}
+.submit_btn{
+float:right;
+height:100%;
+width:100px;
+padding:10px;
+margin:5px 0;
+background-color:#fafafa;
+border:0;
+}
+.add_up_div{
+overflow:hidden;
+}
+.add_up_div{
+overflow:hidden;
+}
+.edit_area_backup{
+display:none;
+}
+.edit_ok{
+width:70%;
+display:none;
+background-color:#eaeaea;
+}
+.edit_cancle{
+width:70%;
+display:none;
+background-color:#eaeaea;
+}
+.edit_btn{
+width:70%;
+background-color:#eaeaea;
+}
