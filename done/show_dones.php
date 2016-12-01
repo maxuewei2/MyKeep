@@ -2,8 +2,8 @@
 require_once ('../funs.php');
 $c=$con=getDatabaseConnect();
 if($c==-1){
-echo "Error.Can't connect the database.";
-exit;
+    echo "Error.Can't connect the database.";
+    exit;
 }
 
 require_once ('../common_head.html');
@@ -16,33 +16,30 @@ if($result){
         $rows=get_lines_count($row['task_content']);
 echo <<<STR1
 <div class="task_div">
-<div class="task_up_div">
-<div class="task_done_div">
-$done
+    <div class="task_up_div">
+        <div class="task_done_div">
+            $done
+        </div>
+        <!--
+            <div class="task_id_div">
+            $row[task_id]
+            </div>
+        -->
+        <div class="task_content_div" id="task_content_div$row[task_id]">
+            <textarea class="edit_area" id="edit_area$row[task_id]" rows="$rows" disabled="disabled">$row[task_content]</textarea>
+        </div>
+        <div class="task_btn_div">
+            <button class="task_delete_btn" onclick="delete_task($row[task_id])">X</button>
+        </div>
+    </div>
+    <!--
+        <div class="task_down_div">
+            <div class="task_time_div">
+                $row[task_add_time]
+            </div>
+        </div>
+    -->
 </div>
-<!--
-<div class="task_id_div">
-$row[task_id]
-</div>
--->
-    <div class="task_content_div" id="task_content_div$row[task_id]">
-<textarea class="edit_area" id="edit_area$row[task_id]" rows="$rows" disabled="disabled">$row[task_content]</textarea>
-</div>
-
-<div class="task_btn_div">
-<button class="task_delete_btn" onclick="delete_task($row[task_id])">X</button>
-</div>
-
-</div>
-<!--
-<div class="task_down_div">
-<div class="task_time_div">
-$row[task_add_time]
-</div>
-</div>
--->
-</div>
-
 STR1;
 }
 }

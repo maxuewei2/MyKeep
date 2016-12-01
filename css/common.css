@@ -1,152 +1,160 @@
 * {
-margin:0;
+    margin:0;
 }
+
 focus{
-outline: none;
+    outline: none;
 }
+
 button{
-outline:none;
+    outline:none;
 }
+
 input{
-outline:none;
+    outline:none;
 }
+
 textarea{
-outline:none;
+    outline:none;
 }
+
 select{
-box-shadow:none;
-outline:none;
+    box-shadow:none;
+    outline:none;
 }
+
 .task_done_div input {
-background-color:#fff;
-border:1px solid #444;
-color:#fff;
-padding:100px;
+    background-color:#fff;
+    border:1px solid #444;
+    color:#fff;
+    padding:100px;
 }
 
 body {
-background-color:#e8e8e8;
-padding-left:20%;
-padding-right:20%;
+    background-color:#e8e8e8;
+    padding-left:20%;
+    padding-right:20%;
 }
 
 #content_body {
-padding:50px 0;
+    padding:50px 0;
 }
 
 .task_div {
-background-color:#fafafa;
-color:#444;
-width:100%;
-overflow:hidden;
-margin:10px 0;
-padding:5px 0;
+    background-color:#fafafa;
+    color:#444;
+    width:100%;
+    overflow:hidden;
+    margin:10px 0;
+    padding:5px 0;
 }
 
 .task_id_div {
-float:left;
-width:10%;
-color:#777;
+    float:left;
+    width:10%;
+    color:#777;
 }
 
 .task_content_div {
-float:left;
-padding-top:10px;
-padding-bottom:10px;
-width:70%;
-overflow:hidden;
+    float:left;
+    padding-top:10px;
+    padding-bottom:10px;
+    width:70%;
+    overflow:hidden;
 }
 
 .edit_area {
-background-color:#fafafa;
-border:0;
-width:80%;
-resize:none;
-color:#444;
+    background-color:#fafafa;
+    border:0;
+    width:80%;
+    resize:none;
+    color:#444;
 }
 
 .task_btn_div {
-float:right;
-width:10%;
-overflow:hidden;
+    float:right;
+    width:10%;
+    overflow:hidden;
 }
 
 .task_btn_div button {
-border:0;
-margin:5px 10px;
-padding:5px 10px;
+    border:0;
+    margin:5px 10px;
+    padding:5px 10px;
 }
 
 .task_time_div {
-float:right;
-min-width:40%;
-text-align:right;
-color:#777;
+    float:right;
+    min-width:40%;
+    text-align:right;
+    color:#777;
 }
 
 .task_done_div {
-float:left;
-width:5%;
-padding:5px;
+    float:left;
+    width:5%;
+    padding:5px;
 }
 
 #nav {
-position:fixed;
-left:10px;
-top:50px;
+    position:fixed;
+    left:10px;
+    top:50px;
 }
 
 #nav a {
-text-decoration:none;
-color:#444;
-display:block;
-cursor:pointer;
-background-color:#fff;
-padding:20px 40px;
+    text-decoration:none;
+    color:#444;
+    display:block;
+    cursor:pointer;
+    background-color:#fff;
+    padding:20px 40px;
 }
 
 .show_setting {
-background-color:#fff;
-cursor:pointer;
-text-decoration:none;
-color:#444;
-display:block;
-position:fixed;
-right:10px;
-top:50px;
-padding:10px;
+    background-color:#fff;
+    cursor:pointer;
+    text-decoration:none;
+    color:#444;
+    display:block;
+    position:fixed;
+    right:10px;
+    top:50px;
+    padding:10px;
 }
+
 .show_setting img{
-width:30px;
-height:30px;
+    width:30px;
+    height:30px;
 }
+
 #top_bottom {
-position:fixed;
-right:10px;
-bottom:50px;
+    position:fixed;
+    right:10px;
+    bottom:50px;
 }
 
 #top_bottom a {
-text-align:center;
-text-decoration:none;
-color:#444;
-display:block;
-cursor:pointer;
-background-color:#fff;
-padding:10px 20px;
+    text-align:center;
+    text-decoration:none;
+    color:#444;
+    display:block;
+    cursor:pointer;
+    background-color:#fff;
+    padding:10px 20px;
 }
 
 pre {
-white-space:0;
-word-wrap:break-word;
+    white-space:0;
+    word-wrap:break-word;
 }
 
 .task_up_div,.task_down_div {
-overflow:hidden;
-width:100%;
+    overflow:hidden;
+    width:100%;
 }
 
 #nav a:hover,#top_bottom a:hover {
-background-color:grey;
-color:#eee;
+    background-color:grey;
+    color:#eee;
 }

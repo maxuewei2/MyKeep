@@ -37,27 +37,30 @@ TIME;
 $sql="SELECT * FROM `tasks` where task_done='N' or task_done='N' order by task_id desc";
 $result =$con->query($sql);
 if($result){
-    echo <<<STR1
-        <div class="select_div">
-            <select id="task_select" class="task_select" onmouseover="show_select_content()" onmouseout="out_select()">
+echo <<<STR1
+<div class="select_div">
+    <select id="task_select" class="task_select" onmouseover="show_select_content()" onmouseout="out_select()">
 STR1;
 
 	while($row = $result->fetch_array()){
     	$i=strpos($row['task_content'],"\n");
-    	if(!$i){$i=strlen($row['task_content']);}
+    	if(!$i){
+    	    $i=strlen($row['task_content']);
+    	}
             $select_content=substr($row['task_content'],0,$i);
-
-            echo <<<STR1
-                <option value=$row[task_id] id="option$row[task_id]">$select_content</option>
+echo <<<STR1
+        <option value=$row[task_id] id="option$row[task_id]">$select_content</option>
 STR1;
     }
-        echo <<<STR1
-            </select>
-            <div id="select_content_div"  ">
-            <textarea id="select_content_area" rows="10" cols="50" onmouseover="on_area()" onmouseout="hide_select_content_1()"></textarea>
-            </div>
-            <!--<input id="select_content_input" value=-1 />-->
-        </div>
+echo <<<STR1
+    </select>
+    <div id="select_content_div"  ">
+        <textarea id="select_content_area" rows="10" cols="50" onmouseover="on_area()" onmouseout="hide_select_content_1()"></textarea>
+    </div>
+    <!--
+        <input id="select_content_input" value=-1 />
+    -->
+</div>
 STR1;
 }
 

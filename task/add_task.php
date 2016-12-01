@@ -2,9 +2,6 @@
 require_once ('../funs.php');
 $con=getDatabaseConnect();
 
-
-
-
 $content = $_POST['content'];
 $time    = date('Y-m-d H:i:s', time());
 

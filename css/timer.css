@@ -1,16 +1,16 @@
 * {
-margin:0;
-padding:0;
+    margin:0;
+    padding:0;
 }
 
 body {
-padding-bottom:0;
+    padding-bottom:0;
 }
 
 #content_body {
-width:100%;
-height:100%;
-padding-bottom:0;
+    width:100%;
+    height:100%;
+    padding-bottom:0;
 }
 
 .select_div {
@@ -24,7 +24,7 @@ padding-bottom:0;
 }
 
 .select_div select {
-/*    width:226px;*/
+    /*width:226px;*/
     background-color:#e8e8e8;
     color:#444;
     font-size:18px;
@@ -36,71 +36,74 @@ padding-bottom:0;
     border-right-style: none;
     border-left-style: none;
     border-bottom-style: none;
-/*    border-top:1px solid #c0c0c0;*/
+    /*border-top:1px solid #c0c0c0;*/
     -moz-appearance:none;
     -webkit-appearance:none;
 }
 
 .task_select option {
-text-align:center;
-padding:10px 5px 10px 5px;
-font-size:18px;
-border:0;
-box-shadow:none;
+    text-align:center;
+    padding:10px 5px 10px 5px;
+    font-size:18px;
+    border:0;
+    box-shadow:none;
 }
+
 #select_content_div{
-display:none;
-position:absolute;
-top:-0px;
-left:0px;
-max-width:100%;
-background-color:#fafafa;
-padding:0px 0px;
-color:#444;
-box-shadow:0px 0px 20px #888888;
+    display:none;
+    position:absolute;
+    top:-0px;
+    left:0px;
+    max-width:100%;
+    background-color:#fafafa;
+    padding:0px 0px;
+    color:#444;
+    box-shadow:0px 0px 20px #888888;
 }
+
 #select_content_area{
-border:0;
-padding:20px 20px;
-background-color:#fafafa;
-resize:none;
+    border:0;
+    padding:20px 20px;
+    background-color:#fafafa;
+    resize:none;
 }
+
 canvas {
-display:block;
+    display:block;
 }
 
 #canvas_div {
-width:100%;
-height:100%;
+    width:100%;
+    height:100%;
 }
 
 #timer_canvas {
-width:100%;
-height:100%;
-min-height:400px;
-max-height:500px;
+    width:100%;
+    height:100%;
+    min-height:400px;
+    max-height:500px;
 }
 
 .btn_div {
-overflow:hidden;
-width:100%;
-padding:0;
+    overflow:hidden;
+    width:100%;
+    padding:0;
 }
 
 .timer_btn {
-cursor:pointer;
-width:25%;
-background-color:#fff;
-border:0;
-margin:5px -.25%;
-padding:10px 0;
+    cursor:pointer;
+    width:25%;
+    background-color:#fff;
+    border:0;
+    margin:5px -.25%;
+    padding:10px 0;
 }
 
 .timer_btn:hover {
-background-color:grey;
-color:#eee;
+    background-color:grey;
+    color:#eee;
 }
 
 .time_setting_div {
-display:none;
+    display:none;
 }

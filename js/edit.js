@@ -17,7 +17,6 @@ function set_btns(id, i) {
             change_area_rows(id);
         }
     }
-
     var bid = "edit_btn" + id;
     var b = document.getElementById(bid);
     if (i == 1) {
@@ -25,7 +24,6 @@ function set_btns(id, i) {
     } else {
         b.style.display = "none";
     }
-
     var bokid = "edit_ok" + id;
     var bok = document.getElementById(bokid);
     if (i == 1) {
@@ -33,7 +31,6 @@ function set_btns(id, i) {
     } else {
         bok.style.display = "block";
     }
-
     var bcid = "edit_cancle" + id;
     var bc = document.getElementById(bcid);
     if (i == 1) {
@@ -53,7 +50,6 @@ function add_backup_area(id) {
     eb.value = e.value;
     d.appendChild(eb);
 }
-
 function remove_backup_area(id) {
     var did = "task_content_div" + id;
     var d = document.getElementById(did);
@@ -61,7 +57,6 @@ function remove_backup_area(id) {
     var eb = document.getElementById(ebid);
     d.removeChild(eb);
 }
-
 function begin_edit(id) {
     add_backup_area(id);
     set_btns(id, 2);
@@ -75,18 +70,15 @@ function edit_cancle(id) {
     remove_backup_area(id);
     set_btns(id, 1);
 }
-
 function edit_success(id) {
     remove_backup_area(id);
     set_btns(id, 1);
 }
-
 function update(id, content) {
     var url = "update_task.php";
     var args = "id=" + id + "&content=" + content;
     postajax(id, url, args);
 }
-
 function edit_done(id) {
     var eid = "edit_area" + id;
     var e = document.getElementById(eid);
