@@ -84,18 +84,23 @@ canvas {
     max-height:500px;
 }
 
+.btn_table{
+    width:100%;
+}
+
 .btn_div {
     overflow:hidden;
-    width:100%;
+    width:80%;
     padding:0;
+    margin:0 auto;
 }
 
 .timer_btn {
     cursor:pointer;
-    width:25%;
+    width:100%;
     background-color:#fff;
     border:0;
-    margin:5px -.25%;
+    margin:5px 0px;
     padding:10px 0;
 }
 

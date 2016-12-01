@@ -74,10 +74,22 @@ echo<<<STR
     <canvas id="timer_canvas" width="100" height="100"></canvas>
 </div>
 <div class="btn_div">
-    <button id="timer_done_btn" class="timer_btn" onclick="on_done_btn()">Done</button>
-    <button id="timer_skip_btn" class="timer_btn" onclick="on_skip_btn()">Skip</button>
-    <button id="timer_start_btn" class="timer_btn" onclick="on_start_pause_btn()">Start</button>
-    <button id="timer_stop_btn" class="timer_btn" onclick="on_stop_btn()">Stop</button>
+    <table class="btn_table">
+        <tr>
+            <td>
+                <button id="timer_done_btn" class="timer_btn" onclick="on_done_btn()">Done</button>
+            </td>
+            <td>
+                <button id="timer_skip_btn" class="timer_btn" onclick="on_skip_btn()">Skip</button>
+            </td>
+            <td>
+                <button id="timer_start_btn" class="timer_btn" onclick="on_start_pause_btn()">Start</button>
+            </td>
+            <td>
+                <button id="timer_stop_btn" class="timer_btn" onclick="on_stop_btn()">Stop</button>
+            </td>
+        </tr>
+    </table>
 </div>
 STR;
 require_once ('../common_foot.html');
