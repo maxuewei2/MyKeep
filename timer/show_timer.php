@@ -1,12 +1,12 @@
 <?php
-include '../funs.php';
+require_once ('../funs.php');
 $c=getDatabaseConnect($con);
 if($c==-1){
 echo "Error.Can't connect the database.";
 exit;
 }
 
-echo_common_head();
+require_once ('../common_head.html');
 
 $sql="SELECT setting_content FROM `setting` where setting_name='work_time' ";
 $result =$con->query($sql);
@@ -73,7 +73,7 @@ echo<<<STR
 <button id="timer_stop_btn" class="timer_btn" onclick="on_stop_btn()">Stop</button>
 </div>
 STR;
-echo_common_foot();
+require_once ('../common_foot.html');
 
 ?>
 

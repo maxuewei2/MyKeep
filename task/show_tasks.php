@@ -1,11 +1,11 @@
 <?php
-include '../funs.php';
+require_once ('../funs.php');
 $c=getDatabaseConnect($con);
 if($c==-1){
 echo "Error.Can't connect the database.";
 exit;
 }
-echo_common_head();
+require_once ('../common_head.html');
 
 echo <<<ADD_TABLE
 <div class="add_div">
@@ -59,6 +59,6 @@ STR1;
 }
 
 $con->close();
-echo_common_foot();
+require_once ('../common_foot.html');
 
 ?>

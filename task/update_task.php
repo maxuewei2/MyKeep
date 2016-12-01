@@ -1,5 +1,5 @@
 <?php
-include '../funs.php';
+require_once ('../funs.php');
 getDatabaseConnect($con);
 
 $id      = $_POST['id'];

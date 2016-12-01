@@ -1,12 +1,12 @@
 <?php
-include '../funs.php';
+require_once ('../funs.php');
 $c=getDatabaseConnect($con);
 if($c==-1){
 echo "Error.Can't connect the database.";
 exit;
 }
 
-echo_common_head();
+require_once ('../common_head.html');
 
 $sql="SELECT * FROM `tasks` where task_done='Y' or task_done='y' order by task_id desc";
 $result =$con->query($sql);
@@ -48,6 +48,6 @@ STR1;
 }
 
 $con->close();
-echo_common_foot();
+require_once ('../common_foot.html');
 
 ?>

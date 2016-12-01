@@ -1,5 +1,5 @@
 <?php
-include '../funs.php';
+require_once ('../funs.php');
 $c=getDatabaseConnect($con);
 if($c==-1){
 echo "Error.Can't connect the database.";
@@ -26,7 +26,7 @@ echo "Error.Can't get settings.";
 exit;
 }
 
-echo_common_head();
+require_once ('../common_head.html');
 
 echo <<<HTMLSTR
 <table class="setting_table" border="0">
@@ -105,5 +105,5 @@ xmlhttp.send(args);
 </script>
 OSTR;
 $con->close();
-echo_common_foot();
+require_once ('../common_foot.html');
 ?>
