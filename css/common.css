@@ -1,16 +1,27 @@
 * {
 margin:0;
 }
-
+focus{
+outline: none;
+}
+button{
+outline:none;
+}
+input{
+outline:none;
+}
+textarea{
+outline:none;
+}
+select{
+box-shadow:none;
+outline:none;
+}
 .task_done_div input {
 background-color:#fff;
 border:1px solid #444;
 color:#fff;
 padding:100px;
-}
-
-textarea {
-wrap:physical;
 }
 
 body {
@@ -21,7 +32,6 @@ padding-right:20%;
 
 #content_body {
 padding:50px 0;
-padding-bottom:200px;
 }
 
 .task_div {
@@ -52,6 +62,7 @@ background-color:#fafafa;
 border:0;
 width:80%;
 resize:none;
+color:#444;
 }
 
 .task_btn_div {

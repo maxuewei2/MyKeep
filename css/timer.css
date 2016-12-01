@@ -7,10 +7,10 @@ body {
 padding-bottom:0;
 }
 
-content_body {
+#content_body {
 width:100%;
 height:100%;
-padding:0;
+padding-bottom:0;
 }
 
 .select_div {
@@ -25,7 +25,8 @@ padding:0;
 
 .select_div select {
     /*width:200px;*/
-    background-color:#e8e8e8;
+    background-color:#fafafa;
+    color:#444;
     font-size:20px;
     cursor:pointer;
     padding:10px 20px;
@@ -34,7 +35,6 @@ padding:0;
     border-right-style: none;
     border-left-style: none;
     border-bottom-style: none;
-    appearance:none;
     -moz-appearance:none;
     -webkit-appearance:none;
 }
@@ -43,9 +43,8 @@ padding:0;
 text-align:left;
 padding:2px 5px;
 font-size:14px;
-}
-.task_select option:hover{
-background-color:#e8e8e8;
+border:0;
+box-shadow:none;
 }
 canvas {
 display:block;
