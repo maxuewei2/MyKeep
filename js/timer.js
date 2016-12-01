@@ -133,8 +133,15 @@ function on_start_pause_btn() {
         stop("pause");
     }
 }
+function play_alert_sound(){
+    var au = document.createElement("audio");
+    au.preload="auto";
+    au.src = "sound.wav";
+    au.play();
+}
 function check_break(){
     if(state=="doing"){
+        play_alert_sound();
         if(is_break){
             is_break=false;
             ctime=0;
