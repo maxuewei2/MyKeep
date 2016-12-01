@@ -1,6 +1,6 @@
 <?php
 require_once ('../funs.php');
-$c=getDatabaseConnect($con);
+$c=$con=getDatabaseConnect();
 if($c==-1){
 echo "Error.Can't connect the database.";
 exit;

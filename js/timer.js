@@ -172,3 +172,79 @@ function on_stop_btn() {
     stop("stop");
 }
 start_timer();
+
+
+var select_id=-1;
+var show_div=0;
+function show_select_content(){
+    var s=document.getElementById("task_select");
+    s.style.backgroundColor="#fafafa";
+    var id=s.value;
+//    var v=document.getElementById("select_content_input");
+    if(id!=select_id){
+        select_id=id;
+        var url="get_content.php";
+	    var args="id="+id;
+        postajax_timer("",url,args);
+        var d=document.getElementById("select_content_div");
+    }else{
+
+    }
+    show_select_content_1();
+    setTimeout(hide_select_content,"500");
+}
+function show_select_content_1(){
+    var s=document.getElementById("task_select");
+    var sl=getElementLeft(s)+s.offsetLeft;
+    var st=getElementTop(s)+s.offsetTop/2;
+    var dd=document.getElementById("select_content_div");
+    dd.style.position="absolute";
+    dd.style.left=sl+"px";
+    dd.style.top=st+"px";
+    dd.style.display="block";
+}
+function out_select(){
+    var s=document.getElementById("task_select");
+    s.style.backgroundColor="#e8e8e8";
+}
+function on_area(){
+    show_div=2;
+}
+function hide_select_content(){
+    if(show_div>0)return;
+    hide_select_content_1();
+}
+function hide_select_content_1(){
+    show_div=0;
+    document.getElementById("select_content_div").style.display="none";
+}
+function postajax_timer(id,url,args){
+	 var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    var rt=xmlhttp.responseText;
+    var a=document.getElementById("select_content_area");
+    a.value=rt;
+    var line_c = get_lines_count(rt);
+    if(line_c>10)line_c=10;
+    a.setAttribute("rows", line_c);
+//    var d=document.getElementById("select_content_div");
+//    var reg=new RegExp('\\n',"g");
+//    var cont=rt.replace(reg,'<br/>');
+//    d.innerHTML=cont;
+    }
+  }
+xmlhttp.open("POST",url,true);
+xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+xmlhttp.send(args);
+ }

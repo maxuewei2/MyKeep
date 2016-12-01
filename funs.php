@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set('Asia/Shanghai');//'Asia/Shanghai' 亚洲/上海
-function getDatabaseConnect(&$con){
+function getDatabaseConnect(){
     $db_host="localhost:3306";                                           //连接的服务器地址
     $db_user="keep";                                                  //连接数据库的用户名
     $db_psw="mykeep";                                                  //连接数据库的密码

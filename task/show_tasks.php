@@ -1,7 +1,7 @@
 <?php
 require_once ('../funs.php');
-$c=getDatabaseConnect($con);
-if($c==-1){
+$con=getDatabaseConnect();
+if($con==-1){
 echo "Error.Can't connect the database.";
 exit;
 }
@@ -18,7 +18,6 @@ echo <<<ADD_TABLE
 </div>
 </div>
 ADD_TABLE;
-
 $sql="SELECT * FROM `tasks` where task_done='N' or task_done='n' order by task_id desc";
 $result =$con->query($sql);
 if($result){
@@ -54,9 +53,9 @@ echo <<<STR1
     -->
 </div>
 STR1;
+}
+}
 
-}
-}
 
 $con->close();
 require_once ('../common_foot.html');

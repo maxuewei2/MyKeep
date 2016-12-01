@@ -1,6 +1,6 @@
 <?php
 require_once ('../funs.php');
-getDatabaseConnect($con);
+$con=getDatabaseConnect();
 $wtime = $_POST['wtime'];
 $btime = $_POST['btime'];
 

@@ -1,6 +1,6 @@
 <?php
 require_once ('../funs.php');
-getDatabaseConnect($con);
+$con=getDatabaseConnect();
 
 
 
