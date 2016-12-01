@@ -7,10 +7,11 @@
 ![ScreenShot](ScreenShot/screenshot1.png  "ScreenShot")
 
 
+![ScreenShot](ScreenShot/screenshot2.png  "ScreenShot")
+
+
 ![ScreenShot](ScreenShot/screenshot3.png  "ScreenShot")
 
-
-![ScreenShot](ScreenShot/screenshot2.png  "ScreenShot")
 
 
 ###功能
@@ -18,10 +19,8 @@
 - 添加事项
 - 编辑已添加事项
 - 番茄钟
-
-###注
-
-- 代码很乱。
+- 自定义工作时间和休息时间
+- 声音提醒
 
 ###使用方法
 
