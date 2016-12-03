@@ -6,7 +6,7 @@ if($con==-1){
     exit;
 }
 
-require_once ('../common_head.html');
+require_once ('../common_head.php');
 
 $sql="SELECT setting_content FROM `setting` where setting_name='work_time' ";
 $result =$con->query($sql);
@@ -92,7 +92,7 @@ echo<<<STR
     </table>
 </div>
 STR;
-require_once ('../common_foot.html');
+require_once ('../common_foot.php');
 
 ?>
 

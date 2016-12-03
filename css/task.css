@@ -7,7 +7,7 @@
     padding:1px;
 }
 
-.submit_btn {
+#submit_btn {
     float:right;
     height:100%;
     width:100px;
@@ -16,7 +16,9 @@
     margin:5px 0;
     padding:10px;
 }
-
+#submit_btn:hover{
+    background-color:#fff;
+}
 .edit_area_backup {
     display:none;
 }

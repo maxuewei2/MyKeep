@@ -27,7 +27,7 @@ if($result){
     exit;
 }
 
-require_once ('../common_head.html');
+require_once ('../common_head.php');
 
 echo <<<HTMLSTR
 <table class="setting_table" border="0">
@@ -45,69 +45,8 @@ echo <<<HTMLSTR
         </td>
     </tr>
 </table>
-
-
-<div id="infoout"></div>
-
-<script language="JavaScript">
-function submit_setting(){
- 	var wtime=document.getElementById("work_time_input").value;
- 	var btime=document.getElementById("break_time_input").value;
-	if(wtime==""){
-	    document.getElementById("infoout").innerHTML="work_time不能为空。";
-	    return;
-	}
-    if(!(/^\d+$/.test(wtime))){
-        document.getElementById("infoout").innerHTML="work_time请填入数字。";
-        return;
-    }
- 	if(btime==""){
- 	    document.getElementById("infoout").innerHTML="break_time不能为空。";
- 	    return;
- 	}
-    if(!(/^\d+$/.test(btime))){
-        document.getElementById("infoout").innerHTML="break_time请填入数字。";
-        return;
-    }
-    var url="update_setting.php";
-	var args="wtime="+wtime+"&btime="+btime;
-	postajax_setting("infoout",url,args);
-}
-</script>
 HTMLSTR;
-echo<<<OSTR
-<script language="JavaScript">
-function postajax_setting(id,url,args){
-    var xmlhttp;
-    if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
-        xmlhttp=new XMLHttpRequest();
-    }
-    else{// code for IE6, IE5
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    xmlhttp.onreadystatechange=function(){
-        if(xmlhttp.readyState==4 && xmlhttp.status==200){
-            var rr=xmlhttp.responseText;
-            if(rr=="3"){
-                alert("更新成功");
-            }
-            if(rr=="2"){
-                alert("仅Break_time更新成功,Work_time更新失败.");
-            }
-            if(rr=="1"){
-                alert("仅Work_time更新成功,Break_time更新失败.");
-            }
-            if(rr=="0"){
-                alert("更新失败");
-            }
-        }
-    }
-    xmlhttp.open("POST",url,true);
-    xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-    xmlhttp.send(args);
-}
-</script>
-OSTR;
+
 $con->close();
-require_once ('../common_foot.html');
+require_once ('../common_foot.php');
 ?>

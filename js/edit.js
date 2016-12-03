@@ -77,7 +77,11 @@ function edit_success(id) {
 function update(id, content) {
     var url = "update_task.php";
     var args = "id=" + id + "&content=" + content;
-    postajax(id, url, args);
+    postajax('update',url,args,id);
+}
+function update_handle(rt,id){
+    if(rt=="wrong"){alert("更新失败");}
+    else{edit_success(id);}
 }
 function edit_done(id) {
     var eid = "edit_area" + id;

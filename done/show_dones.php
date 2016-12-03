@@ -6,7 +6,7 @@ if($c==-1){
     exit;
 }
 
-require_once ('../common_head.html');
+require_once ('../common_head.php');
 
 $sql="SELECT * FROM `tasks` where task_done='Y' or task_done='y' order by task_id desc";
 $result =$con->query($sql);
@@ -45,6 +45,6 @@ STR1;
 }
 
 $con->close();
-require_once ('../common_foot.html');
+require_once ('../common_foot.php');
 
 ?>

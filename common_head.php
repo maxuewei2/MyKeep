@@ -5,10 +5,26 @@
         <link rel="shortcut icon" href="../favicon.ico" />
         <title>MyKeep</title>
         <link href="../css/common.css" rel="stylesheet" type="text/css" />
-        <link href="../css/task.css" rel="stylesheet" type="text/css" />
-        <link href="../css/done.css" rel="stylesheet" type="text/css" />
-        <link href="../css/timer.css" rel="stylesheet" type="text/css" />
-        <link href="../css/setting.css" rel="stylesheet" type="text/css" />
+        <?php
+        if(php_self()=='show_tasks.php'){
+            echo '<link href="../css/task.css" rel="stylesheet" type="text/css" />';
+        }
+        ?>
+        <?php
+        if(php_self()=='show_dones.php'){
+            echo '<link href="../css/done.css" rel="stylesheet" type="text/css" />';
+        }
+        ?>
+        <?php
+        if(php_self()=='show_timer.php'){
+            echo '<link href="../css/timer.css" rel="stylesheet" type="text/css" />';
+        }
+        ?>
+        <?php
+        if(php_self()=='show_setting.php'){
+            echo '<link href="../css/setting.css" rel="stylesheet" type="text/css" />';
+        }
+        ?>
     </head>
     <body>
         <a id="show_setting" class="show_setting" href="../setting/show_setting.php">

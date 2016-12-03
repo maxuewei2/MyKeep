@@ -114,7 +114,14 @@ function on_done_btn(){
     stop("stop");
     var s=document.getElementById("task_select");
     var id=s.value;
-    done(id);
+    done(id,'timer');
+}
+function timer_done_handle(rt,id){
+    if(rt=="wrong"){alert("失败");}
+    else{done_success(id);}
+}
+function done_success(id){
+    var s=document.getElementById("task_select");
     var o=document.getElementById("option"+id);
     s.removeChild(o);
 }
@@ -164,6 +171,13 @@ start_timer();
 
 var select_id=-1;
 var show_div=0;
+function select_content_handle(rt){
+    var a=document.getElementById("select_content_area");
+    a.value=rt;
+    var line_c = get_lines_count(rt);
+    if(line_c>10)line_c=10;
+    a.setAttribute("rows", line_c);
+}
 function show_select_content(){
     var s=document.getElementById("task_select");
     s.style.backgroundColor="#fafafa";
@@ -173,7 +187,7 @@ function show_select_content(){
         select_id=id;
         var url="get_content.php";
 	    var args="id="+id;
-        postajax_timer("",url,args);
+        postajax('select_content',url,args,"");
         var d=document.getElementById("select_content_div");
     }else{
 
@@ -206,33 +220,3 @@ function hide_select_content_1(){
     show_div=0;
     document.getElementById("select_content_div").style.display="none";
 }
-function postajax_timer(id,url,args){
-	 var xmlhttp;
-if (window.XMLHttpRequest)
-  {// code for IE7+, Firefox, Chrome, Opera, Safari
-  xmlhttp=new XMLHttpRequest();
-  }
-else
-  {// code for IE6, IE5
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-xmlhttp.onreadystatechange=function()
-  {
-  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-    {
-    var rt=xmlhttp.responseText;
-    var a=document.getElementById("select_content_area");
-    a.value=rt;
-    var line_c = get_lines_count(rt);
-    if(line_c>10)line_c=10;
-    a.setAttribute("rows", line_c);
-//    var d=document.getElementById("select_content_div");
-//    var reg=new RegExp('\\n',"g");
-//    var cont=rt.replace(reg,'<br/>');
-//    d.innerHTML=cont;
-    }
-  }
-xmlhttp.open("POST",url,true);
-xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-xmlhttp.send(args);
- }

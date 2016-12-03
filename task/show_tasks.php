@@ -5,7 +5,7 @@ if($con==-1){
     echo "Error.Can't connect the database.";
     exit;
 }
-require_once ('../common_head.html');
+require_once ('../common_head.php');
 
 echo <<<ADD_TABLE
 <div class="add_div">
@@ -13,8 +13,7 @@ echo <<<ADD_TABLE
         <textarea name="new_task_input" id="new_task_input" rows="5" autofocus></textarea>
     </div>
     <div class="add_down_div">
-        <button type="button"  class="submit_btn" id="submit_btn" onmouseout="out_btn_bc('submit_btn')" onmouseover="over_btn_bc('submit_btn')" onclick="submit()">Add</button>
-        <div id="info_out"></div>
+        <button type="button"  class="submit_btn" id="submit_btn" onclick="submit()">Add</button>
     </div>
 </div>
 ADD_TABLE;
@@ -58,6 +57,6 @@ STR1;
 
 
 $con->close();
-require_once ('../common_foot.html');
+require_once ('../common_foot.php');
 
 ?>

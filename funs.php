@@ -20,4 +20,8 @@ function get_lines_count($content){
     $c=substr_count($newstr,"<br/>");
     return $c+1;
 }
+function php_self(){
+    $php_self=substr($_SERVER['PHP_SELF'],strrpos($_SERVER['PHP_SELF'],'/')+1);
+    return $php_self;
+}
 ?>
