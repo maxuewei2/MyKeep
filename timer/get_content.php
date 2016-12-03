@@ -13,10 +13,8 @@ $result = $con->query($sql);
 if ($result) {
     $row = $result->fetch_array();
     echo "$row[task_content]";
-    exit;
 } else {
     echo 'Something is wrong.';
-    exit;
 }
 
 $con->close();
