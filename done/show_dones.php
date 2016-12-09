@@ -1,12 +1,15 @@
 <?php
-require_once ('../funs.php');
-$c=$con=getDatabaseConnect();
-if($c==-1){
+if(!defined('WEB_ROOT')){
+    header("HTTP/1.1 404 Not Found");
+    exit;
+}
+
+$con=getDatabaseConnect();
+if($con==-1){
     echo "Error.Can't connect the database.";
     exit;
 }
 
-require_once ('../common_head.php');
 
 $sql="SELECT * FROM `tasks` where task_done='Y' or task_done='y' order by task_id desc";
 $result =$con->query($sql);
@@ -45,6 +48,5 @@ STR1;
 }
 
 $con->close();
-require_once ('../common_foot.php');
 
 ?>

@@ -1,6 +1,6 @@
 function delete_task(id){
     if(confirm('确定删除?')){
-        var url="delete_task.php";
+        var url="done/delete_task.php";
 	    var args="id="+id;
 	    postajax("delete",url,args,"");
 	}
@@ -10,7 +10,7 @@ function delete_handle(rt){
     else{location.reload(true);}
 }
 function back_done(id){
-    var url="back_done_task.php";
+    var url="done/back_done_task.php";
 	var args="id="+id;
 	postajax("backdone",url,args,"");
 }

@@ -1,3 +1,19 @@
+.setting_div{
+    background-color:#d8d8d8;
+    margin:10px 0px 10px 0px;
+}
+.setting_div_head{
+    font-size:18px;
+    margin:5px 0px 5px 0px;
+    padding:15px 10px 15px 10px;
+    background-color:#c8c8c8;
+    color:#444;
+}
+.setting_div_content{
+    padding:5px 20px 5px 20px;
+    color:#666;
+    font-family:Arial,Console,Verdana,Courier New;
+}
 .setting_input{
     background-color:#fff;
     color:#444;
@@ -7,7 +23,7 @@
     font-size:15px;
 }
 
-.setting_table th{
+.setting_table_th{
     text-align:right;
 }
 
@@ -21,7 +37,11 @@
 }
 
 .submit_setting_btn{
-    height:100%;
+    padding:5px 10px 5px 10px;
     margin-top:0;
     margin-bottom:0;
+}
+.export_a{
+display:inline-block;
+text-decoration:none;
 }

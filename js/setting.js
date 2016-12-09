@@ -17,7 +17,7 @@ function submit_setting(){
         document.getElementById("infoout").innerHTML="break_time请填入数字。";
         return;
     }
-    var url="update_setting.php";
+    var url="setting/update_setting.php";
 	var args="wtime="+wtime+"&btime="+btime;
 	postajax("setting",url,args,"");
 }
@@ -35,3 +35,4 @@ function setting_handle(rr){
         alert("更新失败");
     }
 }
+

@@ -185,7 +185,7 @@ function show_select_content(){
     //var v=document.getElementById("select_content_input");
     if(id!=select_id){
         select_id=id;
-        var url="get_content.php";
+        var url="timer/get_content.php";
 	    var args="id="+id;
         postajax('select_content',url,args,"");
         var d=document.getElementById("select_content_div");

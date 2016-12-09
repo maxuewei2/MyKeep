@@ -22,7 +22,7 @@ function getElementTop(element){
 　　　　return actualTop;
 }
 function done(id,source){
-    var url="../task/done_task.php";
+    var url="task/done_task.php";
 	var args="id="+id;
 	postajax(source+'done',url,args,id);
 }

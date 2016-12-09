@@ -1,11 +1,15 @@
 <?php
-require_once ('../funs.php');
+if(!defined('WEB_ROOT')){
+    header("HTTP/1.1 404 Not Found");
+    exit;
+}
+
 $con=getDatabaseConnect();
 if($con==-1){
     echo "Error.Can't connect the database.";
     exit;
 }
-require_once ('../common_head.php');
+
 
 echo <<<ADD_TABLE
 <div class="add_div">
@@ -23,6 +27,7 @@ if($result){
 	while($row = $result->fetch_array()){
 	    $done="<input onclick=\"check_done($row[task_id])\" type=\"checkbox\">";
         $rows=get_lines_count($row['task_content']);
+        $cont=unescape_str($row['task_content']);//$row['task_content'];//
 echo <<<STR1
 <div class="task_div">
     <div class="task_up_div">
@@ -35,7 +40,7 @@ echo <<<STR1
             </div>
         -->
         <div class="task_content_div" id="task_content_div$row[task_id]">
-            <textarea class="edit_area" id="edit_area$row[task_id]" rows="$rows" disabled="disabled">$row[task_content]</textarea>
+            <textarea class="edit_area" id="edit_area$row[task_id]" rows="$rows" disabled="disabled">$cont</textarea>
         </div>
         <div class="task_btn_div">
             <button class="edit_btn" id="edit_btn$row[task_id]" onclick="begin_edit($row[task_id])">Edit</button>
@@ -57,6 +62,6 @@ STR1;
 
 
 $con->close();
-require_once ('../common_foot.php');
+
 
 ?>

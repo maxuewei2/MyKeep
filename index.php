@@ -1,5 +1,5 @@
 <?php
 //重定向浏览器
-header("Location: task/show_tasks.php");
+header("Location: mykeep.php?action=tasks");
 exit;
 ?>

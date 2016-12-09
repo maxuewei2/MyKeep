@@ -1,12 +1,15 @@
 <?php
-require_once ('../funs.php');
+if(!defined('WEB_ROOT')){
+    header("HTTP/1.1 404 Not Found");
+    exit;
+}
+
 $con=getDatabaseConnect();
 if($con==-1){
     echo "Error.Can't connect the database.";
     exit;
 }
 
-require_once ('../common_head.php');
 
 $sql="SELECT setting_content FROM `setting` where setting_name='work_time' ";
 $result =$con->query($sql);
@@ -92,7 +95,6 @@ echo<<<STR
     </table>
 </div>
 STR;
-require_once ('../common_foot.php');
 
 ?>
 

@@ -75,7 +75,7 @@ function edit_success(id) {
     set_btns(id, 1);
 }
 function update(id, content) {
-    var url = "update_task.php";
+    var url = "task/update_task.php";
     var args = "id=" + id + "&content=" + content;
     postajax('update',url,args,id);
 }

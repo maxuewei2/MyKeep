@@ -38,15 +38,15 @@ function check_done(id){
     }
 }
 function task_done_handle(rt){
-    if(rt=="wrong"){alert("失败");}
-    else{location.reload(true);}
+    if(rt=="success"){location.reload(true);}
+    else{alert("失败");}
 }
 function submit(){
 	var content=document.getElementById("new_task_input").value;
  	if(content==''){alert('不能为空');return;}
     //var reg=new RegExp("\\n","g");
     //var content_html=content.replace(reg,'<br>');
-    var url="add_task.php";
+    var url="task/add_task.php";
 	var args="content="+content;
 	postajax("add",url,args,"");
 }

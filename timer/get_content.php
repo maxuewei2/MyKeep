@@ -12,7 +12,7 @@ $sql    = "select task_content from `tasks` where task_id='$id'";
 $result = $con->query($sql);
 if ($result) {
     $row = $result->fetch_array();
-    echo "$row[task_content]";
+    echo unescape_str($row['task_content']);
 } else {
     echo 'Something is wrong.';
 }
